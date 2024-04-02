@@ -1,15 +1,8 @@
 <header>
-    <div class="logo">
-        <a href="index.php">
-            <img src="assets/images/logo.png" alt="Логотип">
-        </a>
+    <a href="../index.php">
+        <img src="asets/img/logo.png" alt="Логотип" id="logo">
+    </a>
+    <div id="header-text">
+        <a class="httle" href="../index.php">Verefer</a>
     </div>
-    <nav>
-        <ul>
-            <li><a href="index.php">Главная</a></li>
-            <li><a href="about.php">О нас</a></li>
-            <li><a href="contact.php">Контакты</a></li>
-            <li><a href="blog/index.php">Блог</a></li>
-        </ul>
-    </nav>
 </header>

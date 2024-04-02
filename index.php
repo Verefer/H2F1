@@ -3,20 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная страница</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Verefer</title>
+    <link rel="icon" href="../asets/img/logo.png">
+    <link rel="stylesheet" href="../asets/css/styles.css">
+    <script src="../asets/js/script.js"></script>
 </head>
 <body>
 
 <?php include 'includes/header.php'; ?>
+<?php include 'includes/nav.php'; ?>
 
-<div class="content">
-    <h1>Добро пожаловать на наш сайт!</h1>
-    <p>Здесь вы можете найти всю необходимую информацию о нашей компании.</p>
-    <p>Пройдите по ссылкам вверху страницы, чтобы узнать больше о нас.</p>
-</div>
+<content>
+        <div id="content"><?php include 'includes/content.php'; ?></div>
+        <div id="about" class="hidden"><?php include 'includes/about.php'; ?></div>
+        <div id="contact" class="hidden"><?php include 'includes/contact.php'; ?></div>
+</content>
 
+<div id="clear"></div>
 <?php include 'includes/footer.php'; ?>
 
 </body>
 </html>
+

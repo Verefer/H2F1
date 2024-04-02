@@ -1,63 +1,213 @@
 /* Общие стили */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+    width: 93%;
+    margin: 0 auto;
+    margin-top: 10px;
     padding: 0;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
+.hidden {
+            display: none;
+        }
+
+
+
+/* Шапка */
+header {
+    display: flex;
+    align-items: center;
+    background-color: #666;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-sizing: border-box;
 }
 
-/* Стили для заголовков */
-h1 {
-    color: #333;
-    font-size: 2rem;
+/* Логотип */
+#logo {
+    max-width: 70px;
+    margin-right: 10px;
+    padding-left: 10px;
 }
+
+/* Текст в шапке */
+#header-text {
+    flex-grow: 1;
+}
+
+#content{
+    width: 100%;
+    height: auto;
+    background: rgb(155, 154, 157);
+    box-sizing: border-box;
+    margin: auto;
+    padding: 16px;
+}
+
+
+.httle{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20pt;
+    margin-left: 15px;
+    text-decoration: none;
+    color: inherit;
+    margin: auto;
+}
+
+.httl a:hover {
+    color: inherit;
+}
+
 
 /* Стили для навигационного меню */
-.nav-menu {
-    display: none;
-}
-
-.nav-menu.is-active {
-    display: block;
-}
-
-.nav-menu ul {
-    list-style: none;
-    padding: 0;
-}
-
-.nav-menu ul li {
-    display: inline;
-    margin-right: 10px;
-}
-
-.nav-menu ul li a {
-    text-decoration: none;
-    color: #333;
-}
-
-/* Стили для футера */
-footer {
-    background-color: #f4f4f4;
-    padding: 20px 0;
+nav {
+    background: #666;
     text-align: center;
+    position: relative;
 }
 
-.social-links {
-    list-style: none;
-    padding: 0;
+nav ul, #menu ul{
+    list-style-type: none;
+    padding: 15px;
+    margin: 5px;
 }
 
-.social-links li {
+nav ul li, #menu ul li{
     display: inline;
-    margin-right: 10px;
 }
 
-.social-links li a {
+nav ul li a, #menu ul li a{
     text-decoration: none;
-    color: #333;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    padding: 10px 15px; /* добавляем отступы для кнопок */
+    border-radius: 5px; /* скругляем углы кнопок */
+}
+
+#menu-toggle {
+    max-width: 30px;
+    float: left;
+    margin-top: 8px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    background-color: #fff;
+    padding-inline-end: 10px;
+    z-index: 999;
+    top: 100%;
+    left: 0;
+    display: block;
+    width: auto;
+    border-radius: 5px; /* скругляем углы выпадающего меню */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* добавляем тень выпадающему меню */
+}
+
+.dropdown-menu li {
+    text-align: left;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 8px 15px; /* добавляем отступы для элементов списка в выпадающем меню */
+    color: #333; /* цвет текста элементов списка */
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #000000; /* изменяем цвет фона элемента списка при наведении */
+}
+
+/* Футер */
+footer {
+    background: #333;
+    text-align: center;
+    padding: 5px;
+    margin-top: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-sizing: border-box;
+}
+
+footer p {
+    color: #ccc;
+}
+
+/* Стили для контактов */
+.contact {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.contact img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.contact a {
+    text-decoration: none;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.contact a:hover {
+    color: red;
+}
+
+#clear {
+    clear: both;
+}
+
+
+
+/* Медиа-запрос для мобильных устройств */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 12px;
+        width: 99%;
+        margin-top: 5px;
+    }
+
+    .httle{
+        font-size: 16pt;
+    }
+
+    #logo {
+    max-width: 40px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-right: 5px;
+    padding-left: 5px;
+}
+
+    .contact img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+nav ul, #menu ul{
+    padding: 12px;
+    margin: 4px;
+}
+
+nav ul li, #menu ul li{
+    margin-right: -3px;
+}
+
+nav ul li a, #menu ul li a{
+    padding: 4px 4px; /* добавляем отступы для кнопок */
+}
+
+#menu-toggle{
+     max-width: 20px;
+     margin-block-end: auto;
+}
+
 }
